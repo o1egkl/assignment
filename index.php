@@ -14,7 +14,7 @@ if (fopen("https://".HTTP_REMOTE_SERVER_HOST."/admin-server/LP/".$file_name.'.ph
 	    echo "<p>Unable to open remote file.</p>";
 	    die();
 	}else{
-		echo $html;echo $html;
+		echo $html;
 	}
 }else{
 	echo "<p>There is now such file.</p>";
@@ -24,6 +24,6 @@ if (fopen("https://".HTTP_REMOTE_SERVER_HOST."/admin-server/LP/".$file_name.'.ph
 
 ?>
 <img src="https://<?=HTTP_REMOTE_SERVER_HOST;?>/admin-server/stats/tracker.php?page=<?=$file_name;?>" style="width:0px;height:0px;">
-<img src="https://<?=HTTP_REMOTE_SERVER_HOST;?>/admin-server/stats/tracker.php?page=<?=$file_name;?>" style="width:0px;height:0px;">
+
 </body>
 <html>
