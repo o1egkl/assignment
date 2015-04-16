@@ -3,7 +3,6 @@
 </head>
 <body>
 <?php
-define("HTTP_SERVER_HOST","localhost");
 define("HTTP_REMOTE_SERVER_HOST","infinite-springs-5079.herokuapp.com");
 $ff = explode('/',$_SERVER['REQUEST_URI']);
 
