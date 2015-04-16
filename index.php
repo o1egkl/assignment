@@ -3,13 +3,13 @@
 </head>
 <body>
 <?php
-define("HTTP_SERVER_HOST","localhost");
-define("HTTP_REMOTE_SERVER_HOST","192.168.1.12");
+define("https_SERVER_HOST","localhost");
+define("https_REMOTE_SERVER_HOST","infinite-springs-5079.herokuapp.com");
 $ff = explode('/',$_SERVER['REQUEST_URI']);
 
 $file_name = $ff[count($ff)-1];
-if (fopen("http://".HTTP_REMOTE_SERVER_HOST."/admin-server/LP/".$file_name.'.php','r')){
-	$html = file_get_contents ("http://".HTTP_REMOTE_SERVER_HOST."/admin-server/LP/".$file_name.'.php');
+if (fopen("https://".https_REMOTE_SERVER_HOST."/admin-server/LP/".$file_name.'.php','r')){
+	$html = file_get_contents ("https://".https_REMOTE_SERVER_HOST."/admin-server/LP/".$file_name.'.php');
 	if (!$html) {
 	    echo "<p>Unable to open remote file.</p>";
 	    die();
@@ -23,7 +23,7 @@ if (fopen("http://".HTTP_REMOTE_SERVER_HOST."/admin-server/LP/".$file_name.'.php
 
 
 ?>
-<img src="http://<?=HTTP_REMOTE_SERVER_HOST;?>/admin-server/stats/tracker.php?page=<?=$file_name;?>" style="width:0px;height:0px;">
+<img src="https://<?=https_REMOTE_SERVER_HOST;?>/admin-server/stats/tracker.php?page=<?=$file_name;?>" style="width:0px;height:0px;">
 
 </body>
 <html>
